@@ -10,7 +10,7 @@ from app import db
 auth = Blueprint('auth', __name__)
 
 
-@auth.route('/sign_in', methods=('GET', 'POST'))
+@auth.route('/sign_in', methods=['GET', 'POST'])
 def sign_in():
     if request.method == 'POST':
         email = request.form.get('email')
@@ -37,7 +37,7 @@ def sign_out():
     return redirect(url_for('auth.sign_in'))
 
 
-@auth.route('/sign_up', methods=('GET', 'POST'))
+@auth.route('/sign_up', methods=['GET', 'POST'])
 def sign_up():
     if request.method == 'POST':
         email = request.form.get('email')

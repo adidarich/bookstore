@@ -7,11 +7,14 @@ class AddBook(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(80), unique=True, nullable=False)
     author = db.Column(db.String(80), unique=True, nullable=False)
-    genre = db.Column(db.String(18), nullable=False)
+    pl = db.Column(db.String(18), nullable=False)
     cover = db.Column(db.String(40), nullable=False, default='default')
     description = db.Column(db.Text)
     created_at = db.Column(db.DateTime(timezone=True), server_default=func.now())
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+    def __repr__(self):
+        return self.cover, self.title, self.author
 
 
 class User(db.Model, UserMixin):
