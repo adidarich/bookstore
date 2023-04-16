@@ -6,7 +6,6 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from models import User
 from app import db
 
-
 auth = Blueprint('auth', __name__)
 
 

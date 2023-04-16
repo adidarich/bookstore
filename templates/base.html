@@ -13,13 +13,12 @@
         <li class="nav-item btn btn-light"><a href="/" class="nav-link link-dark px-2 active" aria-current="page">Home</a></li>
         <li class="nav-item btn btn-light"><a href="/library" class="nav-link link-dark px-2">Library</a></li>
         <li class="nav-item btn btn-light"><a href="/add_book" class="nav-link link-dark px-2">Add a book</a></li>
-        <li class="nav-item btn btn-light"><a href="/about" class="nav-link link-dark px-2">About</a></li>
       </ul>
       <ul class="nav">
         {% if user.is_authenticated %}
         <li class="nav-item btn btn-link">
-            <a id="account"
-               href="/account"
+            <a href="/account"
+               id="account"
                class="nav-link link-dark px-2 text-success">
                 <img src="static/icon/user.png" width="24" height="24">
             </a>
