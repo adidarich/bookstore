@@ -1,4 +1,4 @@
-from app import create_app, db
+from app import db
 from flask_login import UserMixin
 from sqlalchemy import func
 

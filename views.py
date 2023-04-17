@@ -37,6 +37,7 @@ def send_file(filename):
 
 
 @views.route('/add_book', methods=['GET', 'POST'])
+@login_required
 def add_book():
     if request.method == 'POST':
         title = request.form['title']

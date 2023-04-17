@@ -1,5 +1,3 @@
-import functools
-
 from flask import Blueprint, flash, redirect, render_template, request, url_for
 from flask_login import login_user, login_required, logout_user, current_user
 from werkzeug.security import check_password_hash, generate_password_hash
